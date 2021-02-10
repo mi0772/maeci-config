@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 9761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+logging:
+  file:
+    name: logs/eureka-server.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %X{transaction.id}  %-5level %logger{36} \\(%line\\) - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %X{transaction.id}  %-5level %logger{36} \\(%line\\) - %msg%n"
+  level:
+    org.springframework.web: OFF
+    org.hibernate: ERROR
+    it.almaviva.gestbeni: INFO
